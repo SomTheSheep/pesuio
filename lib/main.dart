@@ -70,16 +70,32 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        body: Center(
-      child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
-      crossAxisAlignment:CrossAxisAlignment.stretch,
-      children: [
-        Text('PESU'),
-      Text('Hello',
-          style: TextStyle(
-            color: Colors.amber,
-            fontSize: 36.0,
-          )),
-   ] )));
+        body: SafeArea(
+      child: Center(
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'PESU',
+              style: TextStyle(
+                fontSize: 36.0,
+                color: Colors.blue,
+                fontFamily: 'IslandMoments',
+              ),
+            ),
+            Image.asset('assets/images/quack.png',
+            height:200.0,
+            width:200.0,),
+           ElevatedButton(
+             onPressed: (){
+          
+              print('present');
+            }
+          ]),
+      )
+        )
+    )
+    ;
   }
 }
