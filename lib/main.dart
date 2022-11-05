@@ -71,8 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
         body: SafeArea(
-      child: Center(
-        child:Column(
+            child: Center(
+      child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -84,18 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontFamily: 'IslandMoments',
               ),
             ),
-            Image.asset('assets/images/quack.png',
-            height:200.0,
-            width:200.0,),
-           ElevatedButton(
-             onPressed: (){
-          
-              print('present');
-            }
+            Image.asset(
+              'assets/images/quack.png',
+              height: 300.0,
+              width: 300.0,
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('Button'))
           ]),
-      )
-        )
-    )
-    ;
+    )));
   }
 }
